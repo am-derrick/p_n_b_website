@@ -1,2 +1,7 @@
 #Virtual environments
 venv/
+.env
+
+# Node files
+node_modules/
+package-lock.json
