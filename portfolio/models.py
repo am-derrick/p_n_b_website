@@ -24,7 +24,18 @@ class Skill(models.Model):
 class CaseStudy(models.Model):
     """class containing details for the Case Study model"""
 
+    title = models.CharField(max_length=200)
+    challenge = models.TextField()
+    strategy = models.TextField()
+    results = models.TextField()
+    industry = models.CharField(max_length=100)
+
+
+class Testimonial(models.Model):
+    """class containing details for the Testimonial model"""
+
     client_name = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
-    quote = models.ImageField(upload_to="testimonials/", null=True, blank=True)
+    quote = models.TextField()
+    photo = models.ImageField(upload_to="testimonials/", null=True, blank=True)
     video_url = models.URLField(null=True, blank=True)
